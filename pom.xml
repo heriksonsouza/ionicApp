@@ -8,6 +8,7 @@
 	<name>IonicApp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+	
 		<!-- Aqui foi inserida uma dependência ao JUnit para testes de unidade 
 			no projeto. O Maven define a mesma automaticamente no ato da criação do projeto; -->
 		<dependency>
@@ -60,18 +61,13 @@
 			<artifactId>jersey-json</artifactId>
 			<version>1.8</version>
 		</dependency>
-		<!-- Neste intervalo são informadas todas as dependências do Hibernate. 
-			O Hibernate é um framework que viabiliza o mapeamento objeto relacional entre 
-			as tabelas do banco de dados e as classes Java. Lembre-se que as classes 
-			Java representam as entidades do mundo real no sistema. É importante frisar 
-			ainda que embora tenhamos adotado o Hibernate, programaticamente iremos utilizar 
-			as interfaces da especificação JPA para acesso ao banco; -->
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>4.3.7.Final</version>
 		</dependency>
-	
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
@@ -106,13 +102,13 @@
 			<version>2.2.4</version>
 		</dependency>
 	</dependencies>
-	
+
 	<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.2</version>
-			<scope>compile</scope>
-		</dependency>
+		<groupId>commons-logging</groupId>
+		<artifactId>commons-logging</artifactId>
+		<version>1.2</version>
+		<scope>compile</scope>
+	</dependency>
 
 	<build>
 		<plugins>
@@ -127,20 +123,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	<!-- <build> -->
-	<!-- <finalName>TesteCrudRest</finalName> -->
-	<!-- <plugins> -->
-	<!-- <plugin> -->
-	<!-- <groupId>org.apache.tomcat.maven</groupId> -->
-	<!-- <artifactId>tomcat7-maven-plugin</artifactId> -->
-	<!-- <version>2.0</version> -->
-	<!-- <configuration> -->
-	<!-- <path>/</path> -->
-	<!-- <port>8080</port> -->
-	<!-- </configuration> -->
-	<!-- </plugin> -->
-	<!-- </plugins> -->
 
-	<!-- </build> -->
 </project>
   

@@ -42,9 +42,9 @@ public class UsuarioService extends Application {
 	public Response inserir(Usuario usuario) {
 		System.out.println("Entrou");
 		try {
-			if (!validacao.verificarCPFValido(usuario)) {
-				if (!validacao.verificarEmailCadastrado(usuario)) {
-					if (!validacao.verificarCPFCadastrado(usuario)) {
+			if (!validacao.validarCPFUsuario(usuario)) {
+				if (!validacao.verificarEmailUsuario(usuario)) {
+					if (!validacao.verificarCPFUsuario(usuario)) {
 						ListaUsuario.usuarios.add(usuario);
 						return Response.status(Response.Status.OK).entity(Response.Status.OK.toString()).build();
 					} else {
@@ -68,7 +68,7 @@ public class UsuarioService extends Application {
 	@Produces("application/json")
 	public Response buscarPorNome(@PathParam("nome") String nome) {
 		return Response.status(200).entity(new GenericEntity<List<Usuario>>(
-				ListaUsuario.usuarios.stream().filter(us -> u.getNome().equals(nome)).collect(Collectors.toList())) {
+				ListaUsuario.usuarios.stream().filter(us -> us.getNome().equals(nome)).collect(Collectors.toList())) {
 		}).build();
 	}
 
@@ -78,7 +78,7 @@ public class UsuarioService extends Application {
 	public Response buscarCPF(@PathParam("cpf") String cpf) {
 
 		return Response.status(200).entity(new GenericEntity<List<Usuario>>(
-				ListaUsuario.usuarios.stream().filter(us -> u.getCpf().equals(cpf)).collect(Collectors.toList())) {
+				ListaUsuario.usuarios.stream().filter(us -> us.getCpf().equals(cpf)).collect(Collectors.toList())) {
 		}).build();
 	}
 
@@ -87,17 +87,17 @@ public class UsuarioService extends Application {
 	@Produces("application/json")
 	public Response buscarEmail(@PathParam("email") String email) {
 		return Response.status(200).entity(new GenericEntity<List<Usuario>>(
-				ListaUsuario.usuarios.stream().filter(us -> u.getEmail().equals(email)).collect(Collectors.toList())) {
+				ListaUsuario.usuarios.stream().filter(us -> us.getEmail().equals(email)).collect(Collectors.toList())) {
 		}).build();
 	}
 
 	@GET
-	@Path("/buscarDataNascimento/{dataAniversario}")
+	@Path("/buscarDataAniversario/{dataAniversario}")
 	@Produces("application/json")
 	public Response buscarPorDataNascimento(@PathParam("dataAniversario") LocalDate dataAniversario) {
 		return Response
 				.status(200).entity(ListaUsuario.usuarios.stream()
-						.filter(us -> u.getDataAniversario().equals(dataAniversario)).collect(Collectors.toList()))
+						.filter(us -> us.getDtNascimento().equals(dataAniversario)).collect(Collectors.toList()))
 				.build();
 	}
 
