@@ -92,12 +92,12 @@ public class UsuarioService extends Application {
 	}
 
 	@GET
-	@Path("/buscarDataAniversario/{dataAniversario}")
+	@Path("/buscarDataNascimento/{dataNascimento}")
 	@Produces("application/json")
-	public Response buscarPorDataNascimento(@PathParam("dataAniversario") LocalDate dataAniversario) {
+	public Response buscarPorDataNascimento(@PathParam("dataNascimento") LocalDate dataNascimento) {
 		return Response
 				.status(200).entity(ListaUsuario.usuarios.stream()
-						.filter(us -> us.getDtNascimento().equals(dataAniversario)).collect(Collectors.toList()))
+						.filter(us -> us.getDtNascimento().equals(dataNascimento)).collect(Collectors.toList()))
 				.build();
 	}
 
