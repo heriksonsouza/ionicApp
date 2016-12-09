@@ -10,10 +10,12 @@
 			<param-name>jersey.config.server.provider.packages</param-name>
 			<param-value>service</param-value>
 		</init-param>
-	<init-param>
+	
+	<!--  <init-param>
 		<param-name>com.sun.jersey.spi.container.ContainerResponseFilters</param-name>
 		<param-value>service.CORSFilter</param-value>
-	</init-param>
+	</init-param>-->
+	
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Jersey RESTful Application</servlet-name>
