@@ -9,28 +9,20 @@
 	<url>http://maven.apache.org</url>
 	<dependencies>
 
-		<!-- Aqui foi inserida uma dependência ao JUnit para testes de unidade 
-			no projeto. O Maven define a mesma automaticamente no ato da criação do projeto; -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>junit</groupId> -->
+		<!-- <artifactId>junit</artifactId> -->
+		<!-- <version>4.12</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
 
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>2.0.2-beta</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- Neste bloco consta a dependência ao servidor Jersey, framework responsável 
-			por tratar as requisições realizadas ao serviço. Seu código assume o papel 
-			de Servlet Container para receber e tratar todas as requisições realizadas 
-			via protocolo HTTP. Neste projeto iremos implementar as requisições HTTP 
-			com os verbos GET, POST, PUT e DELETE para as respectivas operações de um 
-			CRUD. Assim será possível inserir e realizar a manutenção dos dados no banco 
-			MySQL; -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.mockito</groupId> -->
+		<!-- <artifactId>mockito-all</artifactId> -->
+		<!-- <version>2.0.2-beta</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+
 		<dependency>
 			<groupId>org.glassfish.jersey.bundles</groupId>
 			<artifactId>jaxrs-ri</artifactId>
@@ -53,9 +45,6 @@
 
 		<!-- FIM DAS DEPENDÊNCIAS DO JSON -->
 
-		<!-- Neste bloco é definida a dependência para o suporte à troca de dados 
-			no formato JSON. Desta forma será possível enviar e receber dados no formato 
-			JSON entre as requisições e respostas do cliente ao servidor; -->
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-json</artifactId>
@@ -88,12 +77,12 @@
 		</dependency>
 		<!-- qui é definida a dependência da biblioteca do MySQL. O Hibernate fará 
 			uso desta para acessar o banco de dados. -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.6</version>
-			<scope>compile</scope>
-		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>mysql</groupId> -->
+		<!-- <artifactId>mysql-connector-java</artifactId> -->
+		<!-- <version>5.1.6</version> -->
+		<!-- <scope>compile</scope> -->
+		<!-- </dependency> -->
 
 		<!-- Unable to load 'javax.el.ExpressionFactory -->
 		<dependency>
