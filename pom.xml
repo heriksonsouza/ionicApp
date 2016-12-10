@@ -75,15 +75,7 @@
 			<version>1.0.0.Final</version>
 
 		</dependency>
-		<!-- qui é definida a dependência da biblioteca do MySQL. O Hibernate fará 
-			uso desta para acessar o banco de dados. -->
-		<!-- <dependency> -->
-		<!-- <groupId>mysql</groupId> -->
-		<!-- <artifactId>mysql-connector-java</artifactId> -->
-		<!-- <version>5.1.6</version> -->
-		<!-- <scope>compile</scope> -->
-		<!-- </dependency> -->
-
+		
 		<!-- Unable to load 'javax.el.ExpressionFactory -->
 		<dependency>
 			<groupId>javax.el</groupId>
